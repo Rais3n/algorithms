@@ -130,6 +130,10 @@
     <ClCompile Include="igrzyska_2020.cpp" />
     <ClCompile Include="pizza_2019.cpp" />
     <ClCompile Include="TA-bryłki_2018.cpp" />
+    <ClCompile Include="Zadanie 2_2021.cpp" />
+    <ClCompile Include="Zadanie 3_2020.cpp" />
+    <ClCompile Include="Zadanie 3_2021.cpp" />
+    <ClCompile Include="Zadanie 4_2020.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
