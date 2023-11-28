@@ -2,36 +2,32 @@
 
 using namespace std;
 
-void Presents(int M, int k, int A[][100], int W[], int pos, int santa) {
-
-	if (santa == 0) {
-		for (int i = 1; i <= M; i++) {
-			cout << i << "Mikolaj: ";
-			for (int j = 1; j <= k; j++) {
-				cout << A[i][j]<<" ";
-			}
-		}
-		cout << "\n";
-		return;
-	}
-
-	for (int i = 1; i <= M * k; i++) {
+void Zaprzegi(int A[], int W[], int M, int K,int start, int pos) {
+	if (pos % K == 1 || K == 1)
+		start = 1;
+	for (int i = start; i <= K * M; i++) {
 		if (W[i] == 0) {
-			A[santa][pos] = i;
+			A[pos] = i;
 			W[i] = 1;
-			if (pos < k)
-				Presents(M, k, A, W, pos + 1, santa);
-			else if(pos==k)
-				Presents(M, k, A, W, 1, santa - 1);
+			Zaprzegi(A, W, M, K, i + 1, pos + 1);
+			if(pos==M*K)
+				for (int j = 1; j <= M * K; j++)
+				{
+					if (j % K == 1)
+						cout << "\n" << j / K + 1 << " Mikolaj: ";
+					else if (K == 1)
+						cout << "\n" << j << " Mikolaj: ";
+					cout << A[j] << " ";
+				}
 			W[i] = 0;
 		}
 	}
 }
 
 //int main() {
-//	int A[100][100];
 //	int W[100];
 //	for (int i = 1; i < 100; i++)
 //		W[i] = 0;
-//	Presents(3, 2, A, W, 1, 3);
+//	int A[100];
+//	Zaprzegi(A, W, 4, 2, 1, 1);
 //}

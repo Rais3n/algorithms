@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="igrzyska_2020.cpp" />
-    <ClCompile Include="pizza_2019.cpp" />
-    <ClCompile Include="TA-bryłki_2018.cpp" />
+    <ClCompile Include="zadanie 4_2019.cpp" />
+    <ClCompile Include="roze.cpp" />
+    <ClCompile Include="zadanie 3_2018.cpp" />
+    <ClCompile Include="zadanie 1_2020.cpp" />
+    <ClCompile Include="Zadanie 2_2019.cpp" />
     <ClCompile Include="Zadanie 2_2021.cpp" />
     <ClCompile Include="Zadanie 3_2020.cpp" />
     <ClCompile Include="Zadanie 3_2021.cpp" />

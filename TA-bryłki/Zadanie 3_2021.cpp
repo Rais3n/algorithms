@@ -10,7 +10,7 @@ void reindeerSet(int k,int W[],int A[], int pos, int limit) {
 			if (W[x] == 0) {
 				A[pos] = x;
 				W[x] = 1;
-				for (int y = 1; y <= k; y++) {
+				for (int y = 1 + x; y <= k; y++) {
 					if (W[y] == 0) {
 						A[pos + 1] = y;
 						W[y] = 1;
@@ -29,7 +29,7 @@ void reindeerSet(int k,int W[],int A[], int pos, int limit) {
 		if (W[x] == 0) {
 			A[pos] = x;
 			W[x] = 1;
-			for (int y = 1; y <= k; y++) {
+			for (int y = 1 + x; y <= k; y++) {
 				if (W[y] == 0) {
 					A[pos + 1] = y;
 					W[y] = 1;
@@ -51,13 +51,13 @@ void reindeerSet(int k,int W[],int A[], int pos, int limit) {
 	}
 }
 
-int main() {
-	int k = 6;
-	int W[100];
-	int A[100];
-	for (int i = 1; i < 100; i++) {
-		A[i] = 0;
-		W[i] = 0;
-	}
-	reindeerSet(k, W, A, 1, k + 2);
-}
+//int main() {
+//	int k = 6;
+//	int W[100];
+//	int A[100];
+//	for (int i = 1; i < 100; i++) {
+//		A[i] = 0;
+//		W[i] = 0;
+//	}
+//	reindeerSet(k, W, A, 1, k + 2);
+//}

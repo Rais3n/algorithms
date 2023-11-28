@@ -3,14 +3,15 @@
 using namespace std;
 
 void pizza(int pos, int N, int K, int A[100]) {
-	if (A[pos - 1] == 0 || (N - A[pos - 1]) / 2 < K - (pos - 1)) // drugi warunek, ¿eby troche usprawniæ (przynajmniej mam tak¹ nadzieje ze usprawni
-		return;
+	//if (A[pos - 1] == 0 || (N - A[pos - 1]) / 2 < K - (pos - 1)) // drugi warunek, ¿eby troche usprawniæ (przynajmniej mam tak¹ nadzieje ze usprawni
+	//	return;
 	for (int j = A[pos - 1] + 2; j <= N; j++) {
 		A[pos] = j;
 		if (pos == K) {
 			for (int i = 1; i <= K; i++)
 				cout << A[i] << " ";
 			cout << "\n";
+			return;
 		}
 		else
 		{
